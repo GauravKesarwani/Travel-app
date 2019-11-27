@@ -1,50 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-    </head>
-
-    <body>
-
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
-        <main>
-            <section>
-                <form class="" onsubmit="return false">
-                    <input id="name" type="text" name="input" value="" placeholder="Name">
-                    <input id="submit-btn" type="submit" name="" value="submit">
-                </form>
-            <section>
-
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results">
-                    <p id="polarity"></p>
-                    <p id="polarity_confidence"></p>
-                    <p id="polarity_text"></p>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
-    </body>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Travel App</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+ <body>
+    <div id="app">
+      <div class="holder headline">
+        Travel Planner App
+      </div>
+      <div class='travel-planner'>
+        <div class="holder cityname">
+          <label for="placename">Enter City name here</label>
+          <input type="text" id="placename" placeholder="enter placename here">
+        </div>
+        <button id='submit-btn'>Plan Travel</button>
+      </div>
+      <div class='travel-details'>
+        <div class='entity-left'>
+          <h4>Current Weather for the destination is</h4>
+          <dl class='entity-forecast'>
+            <dt>temperature</dt><dd class='temperature'></dd>
+            <dt>Summary</dt><dd class='summary'></dd>
+          </dl>
+        </div>
+        <div class='entity-right'>
+        </div>
+      </div>
+    
+    </div>
+</body>
 </html>

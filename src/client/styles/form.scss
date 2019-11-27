@@ -10,3 +10,29 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
+
+.travel-details {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.entity-left,
+.entity-right {
+    flex: 1;
+}
+
+.entity-forecast {
+    display: flex;
+    flex-flow: row wrap;
+    width: 400px;
+}
+.destination-img {
+    width: 400px;
+    height: 400px;
+}
+
+dt, dd {
+    width: 200px;
+    flex-basis: auto;
+    text-align: center;
+}

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/server/index.js",
+    "start": "node src/server/server.js",
     "prod": "webpack --config webpack.prod.js",
     "dev": "rm -rf dist && webpack-dev-server  --config webpack.dev.js --mode development --open --watch"
   },
@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
     "valid-url": "^1.0.9",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"

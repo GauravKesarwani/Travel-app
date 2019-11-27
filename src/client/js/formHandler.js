@@ -1,22 +1,24 @@
-import { validateUrl } from './urlChecker'
 import { request } from './request';
+import { populateUI } from './view';
+
 
 const baseUrl = 'http://localhost:8080/test';
+const username = 'gauravkesarwani';
+const darkskySecretKey = '52eb506b09a9f2e3c21a05ee3f64d480';
 
 const resultEl = document.getElementById('results');
-const polarityConfidence = document.getElementById('polarity_confidence');
-const polarityText = document.getElementById('polarity_text');
-const polarity = document.getElementById('polarity');
+const inputEl = document.getElementById('placename');
 
 
-function handleSubmit(url) {
-    if (validateUrl(url)) {
+function handleSubmit() {
+    // Todo: replace this with form validation
+    if (true) {
         console.log("::: Form Submitted :::")
-        request(`${baseUrl}/?url=${url}`)
+        const placename = inputEl.value;
+        // call the geonames api
+        request(`${baseUrl}?placename=${placename}&username=${username}`)
             .then(function (res) {
-                polarity.innerHTML = res.message.polarity;
-                polarityConfidence.innerHTML = res.message.polarity_confidence;
-                polarityText.innerHTML = res.message.text;
+                populateUI(res.data);
             });
         
         return true;

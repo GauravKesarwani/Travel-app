@@ -5,7 +5,7 @@
 
 ## Setting up the API
 
-Create a new ```.env``` file in the root of your project and dill the .env file with your API keys like this:
+Create a new ```.env``` file in the root of your project and fill the .env file with your API keys like this:
 ```
 API_ID=**************************
 API_KEY=**************************
@@ -26,3 +26,6 @@ Run `npm run prod` to run the client
 ## Run Jest Test
 
 Run `npm run test` to run the tests
+
+## Extend Options
+Integrated the REST countries api
